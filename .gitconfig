@@ -1,0 +1,16 @@
+# Global Config
+[user]
+    name = "Nikolai Golub"
+
+
+[alias]
+    # branch
+    b  = branch
+    bc = checkout -b
+    # checkout
+    co = checkout
+    nb = checkout -b
+    
+    s = status
+    su = status -u
+    c = commit
