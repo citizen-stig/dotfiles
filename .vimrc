@@ -6,22 +6,22 @@
 
 " ===========================================================================
 " Vundle Configuration start
-"
-"set nocompatible              " be iMproved, required
-"filetype off                  " required
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"Plugin 'kien/ctrlp.vim'            " Fuzzy file search, by name
-"Plugin 'FelikZ/ctrlp-py-matcher'   " Faster matcher, to make ctrlp bareable
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'            " Fuzzy file search, by name
+Plugin 'FelikZ/ctrlp-py-matcher'   " Faster matcher, to make ctrlp bareable
+Plugin 'scrooloose/nerdtree'       " Tree of files
+Plugin 'jiangmiao/auto-pairs'      " Match brackets
 
-"Plugin 'scrooloose/nerdtree'       " Tree of files
-"call vundle#end()
-"filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on         " required
 " ============================================================================
 
 " -=-= Verified =-=-
@@ -52,26 +52,24 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 
 set ttyfast
 
-" Search Files
-" set path+=**
-" -=-= End of Verified -=-=-
-
 "highlight NonText ctermfg=8 guifg=gray
 " ctrlp imporovements
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-"let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-"let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-"if executable('ag')
-"  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-"endif
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+endif
 " Didn't check these
-"let g:ctrlp_by_filename = 0
-"let g:ctrlp_lazy_update = 1
-"let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:40'
+let g:ctrlp_by_filename = 0
+let g:ctrlp_lazy_update = 1
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:40'
 " end of ctrp improvements
 
 " Nerdtree configuration
-"let g:NERDTreeNodeDelimiter = "\u00a0"
-"map <silent> <C-n> :NERDTreeToggle<CR>
-"map <silent> <C-k> :NERDTreeFind<CR>
+let g:NERDTreeNodeDelimiter = "\u00a0"
+map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> <C-k> :NERDTreeFind<CR>
 " End of nerdtree configure
