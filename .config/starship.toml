@@ -1,0 +1,120 @@
+add_newline = false
+scan_timeout = 10
+
+prompt_order = [
+    "time",
+
+    "hostname",
+
+
+#    "username",
+#    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_commit",
+    "git_state",
+    "git_status",
+#    "hg_branch",
+#    "docker_context",
+    "package",
+#    "dotnet",
+#    "elixir",
+#    "elm",
+#    "erlang",
+    "golang",
+    "java",
+#    "julia",
+#    "nim",
+#    "nodejs",
+#    "ocaml",
+#    "php",
+#    "purescript",
+    "python",
+    "ruby",
+    "rust",
+#    "terraform",
+#    "zig",
+#    "nix_shell",
+#    "conda",
+#    "memory_usage",
+#    "aws",
+#    "env_var",
+#    "crystal",
+#    "cmd_duration",
+#    "custom",
+    "line_break",
+#    "jobs",
+#    "battery",
+
+    "character",
+]
+
+[line_break]
+disabled = true
+
+
+[character]      # The name of the module we are configuring is "character"
+symbol = "▸"
+
+[time]
+disabled = false
+format = "[%T]"
+#utc_time_offset = "-5"
+#time_range = "10:00:00-14:00:00"
+
+[git_branch]
+prefix = ""
+version = ""
+suffix = ""
+symbol = " "
+
+[git_status]
+disabled = true
+
+[git_state]
+disabled = true
+
+[java]
+disabled = true
+
+
+
+[python]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[aws]
+disabled = true
+
+[battery]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[conda]
+disabled = true
+
+[crystal]
+disabled = true
+
+[directory]
+truncation_length = 5
+prefix = ""
+
+[hostname]
+disabled = true
+
+[golang]
+disabled = true
+
+[username]
+disabled = true
+
+[singularity]
+disabled = true
+
+[terraform]
+disabled = true
