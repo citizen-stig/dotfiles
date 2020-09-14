@@ -14,6 +14,9 @@
     s = status
     su = status -u
     c = commit
+    
+    hist = log --graph --color=always --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s' --all
+    branches = for-each-ref --sort=-committerdate refs/heads/
 [color]
     ui = auto
 [push]
