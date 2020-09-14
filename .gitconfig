@@ -14,3 +14,9 @@
     s = status
     su = status -u
     c = commit
+[color]
+    ui = auto
+[push]
+    default = upstream
+[pull]
+    rebase = true
