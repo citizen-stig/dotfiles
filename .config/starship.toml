@@ -1,71 +1,38 @@
+
 add_newline = false
 scan_timeout = 10
 
-prompt_order = [
-    "time",
-
-    "hostname",
-
-
-#    "username",
-#    "kubernetes",
-    "directory",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-#    "hg_branch",
-#    "docker_context",
-    "package",
-#    "dotnet",
-#    "elixir",
-#    "elm",
-#    "erlang",
-    "golang",
-    "java",
-#    "julia",
-#    "nim",
-#    "nodejs",
-#    "ocaml",
-#    "php",
-#    "purescript",
-    "python",
-    "ruby",
-    "rust",
-#    "terraform",
-#    "zig",
-#    "nix_shell",
-#    "conda",
-#    "memory_usage",
-#    "aws",
-#    "env_var",
-#    "crystal",
-#    "cmd_duration",
-#    "custom",
-    "line_break",
-#    "jobs",
-#    "battery",
-
-    "character",
-]
+format = """\
+  $time\
+  $hostname\
+  $directory\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $custom\
+  $jobs\
+  $character\
+  """
 
 [line_break]
 disabled = true
 
-
-[character]      # The name of the module we are configuring is "character"
+[character]
 symbol = "▸"
+success_symbol = "[▸](bold green)"
+error_symbol = "[▸](bold red)"
+vicmd_symbol = "[❮](bold green)"
 
 [time]
 disabled = false
-format = "[%T]"
+time_format = "[%T]"
+format = "[$time]($style) "
 #utc_time_offset = "-5"
 #time_range = "10:00:00-14:00:00"
 
 [git_branch]
-prefix = ""
 version = ""
-suffix = ""
 symbol = " "
 
 [git_status]
@@ -102,7 +69,7 @@ disabled = true
 
 [directory]
 truncation_length = 5
-prefix = ""
+format = "[$path]($style)[$read_only]($read_only_style) "
 
 [hostname]
 disabled = true
@@ -117,4 +84,7 @@ disabled = true
 disabled = true
 
 [terraform]
+disabled = true
+
+[package]
 disabled = true
