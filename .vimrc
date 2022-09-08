@@ -6,8 +6,10 @@
 
 " ===========================================================================
 " Vundle Configuration start
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible                  " be iMproved, required
+filetype off                      " required
+
+set backspace=indent,eol,start.   " allow backspacing over everything in insert mode
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
